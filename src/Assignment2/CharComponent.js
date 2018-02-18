@@ -1,10 +1,11 @@
 import React from 'react';
+import Radium from 'radium';
 
-export function CharComponent(props) {
+function CharComponent(props) {
     return (
         <div style={charCompStyle}>
             <div>{props.char}</div>
-            <button onClick={props.delete}>Delete</button>
+            <button style={buttonStyle} onClick={props.delete}>Delete</button>
         </div>
     )
 }
@@ -17,3 +18,22 @@ let charCompStyle = {
     border: '1px solid dodgerblue',
     borderRadius: '10px'
 };
+
+let buttonStyle = {
+    backgroundColor: '#229ad6',
+    color: '#e2e2e2',
+    padding: '10px',
+    boxShadow: '0px 0px 3px grey',
+    borderRadius: '10px',
+    border: '1px solid #229ad6',
+    ':hover': {
+        backgroundColor: '#1d86ba',
+        color: '#ffffff',
+        cursor: 'pointer'
+    },
+    ':active': {
+        transform: 'translateY(4px)'
+    }
+};
+
+export default Radium(CharComponent);
