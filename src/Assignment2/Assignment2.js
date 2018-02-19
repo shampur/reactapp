@@ -21,10 +21,15 @@ export class Assignment2 extends React.Component {
         });
     }
 
+    componentDidMount() {
+        this.inputElement.focus();
+    }
+
     render() {
         return (
             <div>
-                <input type="text" onChange={this.updateInputChange.bind(this)} value={this.state.inputText}/>
+                <input type="text" onChange={this.updateInputChange.bind(this)} value={this.state.inputText}
+                ref={(inp) => {this.inputElement = inp}}/>
                 <Validate text={this.state.inputText}/>
                 <div>
                 {this.state.inputText.split('').map((char, index) => {
