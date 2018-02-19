@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import propTypes from 'prop-types';
 
 function CharComponent(props) {
     return (
@@ -34,6 +35,11 @@ let buttonStyle = {
     ':active': {
         transform: 'translateY(4px)'
     }
+};
+
+CharComponent.propTypes = {
+    char: propTypes.string,
+    delete: propTypes.func
 };
 
 export default Radium(CharComponent);

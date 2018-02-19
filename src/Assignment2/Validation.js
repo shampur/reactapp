@@ -1,6 +1,7 @@
 import React from 'react';
 import Aux from '../Hoc/Aux';
 import WithClass from '../Hoc/WithClass';
+import propTypes from 'prop-types';
 
 function Validate(props) {
     let message;
@@ -15,6 +16,10 @@ function Validate(props) {
         </Aux>
     );
 }
+
+Validate.propTypes = {
+    text: propTypes.string
+};
 
 
 export default WithClass(Validate, 'dummy');
