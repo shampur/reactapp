@@ -1,4 +1,6 @@
 import React from 'react';
+import Aux from '../Hoc/Aux';
+import WithClass from '../Hoc/WithClass';
 
 function Validate(props) {
     let message;
@@ -8,11 +10,11 @@ function Validate(props) {
         message = (<h5>Text long enough</h5>);
     }
     return (
-        <div>
+        <Aux>
             {message}
-        </div>
+        </Aux>
     );
 }
 
 
-export {Validate};
+export default WithClass(Validate, 'dummy');

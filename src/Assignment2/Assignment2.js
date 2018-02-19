@@ -1,5 +1,5 @@
 import React from 'react';
-import {Validate} from './Validation';
+import Validate from './Validation';
 import CharComponent from './CharComponent';
 
 export class Assignment2 extends React.Component {
